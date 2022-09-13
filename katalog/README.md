@@ -40,6 +40,6 @@ Untuk menampilkan data-datanya, kita menggunakan sintaks {{data}}.
 
 Sebelum melakukan deployment, dilakukan git add, commit, dan push terlebih dahulu ke repositori github yang dituju. Setelah itu, kita perlu membuat aplikasi terlebih dahulu di Heroku, lalu simpan API Key Heroku dan nama aplikasi yang sudah kita buat. 
 
-Setelah itu, kita perlu menambahkan repository secrets pada repository github berupa HEROKU_API_KEY dan HEROKU_APP_NAME yang berisi API key dan nama aplikasi yang tadi kita simpan untuk mengonfigurasi parameter yang dibutuhkan oleh workflow (pada file dpl.yml). Setelah workflow dijalankan, maka proses deployment akan tereksekusi dan aplikasi katalog yang sudah dibuat bisa dibuka melalui https://<nama-aplikasi-heroku>.herokuapp.com/katalog/
+Setelah itu, kita perlu menambahkan repository secrets pada repository github berupa HEROKU_API_KEY dan HEROKU_APP_NAME (lab1-assignment) yang berisi API key dan nama aplikasi yang tadi kita simpan untuk mengonfigurasi parameter yang dibutuhkan oleh workflow (pada file dpl.yml). Setelah workflow dijalankan, maka proses deployment akan tereksekusi dan aplikasi katalog yang sudah dibuat bisa dibuka melalui https://lab1-assignment.herokuapp.com/katalog/
 
 
