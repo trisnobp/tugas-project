@@ -1,0 +1,113 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "title": "Interstellar",
+            "release_date": "November 6, 2014",
+            "watched": "Sudah",
+            "rating": "5",
+            "review": "Interstellar adalah karya terbaik yang pernah diciptakan oleh Christopher Nolan. Bercerita tentang Cooper, seorang mantan pilot NASA, yang harus meninggalkan keluarganya untuk mencari planet baru untuk umat manusia karena bumi sedang di ambang kehancuran. Film ini mengajarkan bahwa selain gravitasi, satu hal lain yang bisa melampaui ruang dan waktu adalah cinta."
+
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "title": "Inception",
+            "release_date": "July 16, 2020",
+            "watched": "Sudah",
+            "rating": "4",
+            "review": "Setelah Interstellar, Inception merupakan karya kedua terbaik yang diciptakan oleh Nolan. Film ini membawakan konsep mimpi, bagaimana kita bisa masuk ke dalam mimpi seseorang untuk mencuri informasi penting. Di akhir film, penonton dibuat bertanya-tanya apakah karakter utama masih berada di dalam mimpi atau di dunia nyata."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "title": "NOPE",
+            "release_date": "August 17, 2022",
+            "watched": "Belum",
+            "rating": "-",
+            "review": "-"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "title": "La La Land",
+            "release_date": "December 9, 2016",
+            "watched": "Sudah",
+            "rating": "4",
+            "review": "Film ini menceritakan tentang Sebastian dan Mia, dua orang yang sedang berjuang untuk menggapai mimpinya, di mana Sebastian bermimpi untuk membuka tempat Jazz sendiri dan Mia yang ingin menjadi aktris terkenal. Kisah cinta mereka berdua dan adegan-adegan musikal berhasil menghidupkan suasana dari film ini. Meskipun pada akhirnya hubungan mereka harus berakhir, mereka berdua akhirnya berhasil menggapai mimpi mereka masing-masing."
+    }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "title": "tick, tick... BOOM!",
+            "release_date": "November 12, 2021",
+            "watched": "Sudah",
+            "rating": "5",
+            "review": "tick, tick... BOOM! merupakan biographical musical drama film yang diangkat dari kisah nyata. Bercerita tentang Jonathan Larson, seorang pelayan di suatu kedai kecil, yang bermimpi untuk mempertunjukkan musical theater-nya sendiri di Broadway. Di film ini, kita ditunjukkan berbagai kegagalan yang dialami oleh Jonathan dan juga konflik yang dialaminya dengan pasangan dan sahabatnya. Film ini mengajarkan kita untuk terus memperjuangkan mimpi yang kita punya selama kita masih diberi kesempatan."
+}
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "title": "All The Bright Places",
+            "release_date": "February 28, 2020",
+            "watched": "Sudah",
+            "rating": "4",
+            "review": "Menceritakan tentang Violet Markey, seorang anak SMA yang merasa kehilangan dengan kematian kakaknya, yang bertemu dengan Theodore Finch, seorang anak yang memiliki trauma atas masa lalunya. Film yang mengangkat tema kesehatan mental ini sangat heartwarming dan ending-nya sukses membuat saya sangat sedih."
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "title": "Mencuri Raden Saleh",
+            "release_date": "August 25, 2022",
+            "watched": "Belum",
+            "rating": "-",
+            "review": "-"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "title": "You are the Apple of My Eye",
+            "release_date": "August 19, 2011",
+            "watched": "Sudah",
+            "rating": "5",
+            "review": "Salah satu film romance yang berhasil membuat saya sedih. Pesan yang ingin disampaikan dari film ini adalah jika kita cinta sama seseorang, maka segera ungkapkanlah apa yang dirasakan sebelum semuanya terlambat."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "title": "Everything Everywhere All At Once",
+            "release_date": "June 22, 2022",
+            "watched": "Sudah",
+            "rating": "5",
+            "review": "Dibandingkan dengan film Doctor Strange, Everything Everywhere All At Once jauh lebih sukses menyajikan film dengan konsep multiverse. Film ini menceritakan tentang Evelyn, seorang pemilik tempat Laundry, yang akhirnya harus berurusan dengan berbagai versi dirinya di multiverse untuk mengalahkan musuh utama multiverse, Jobu Tupaki. Film yang cukup absurd ini sangatlah heartwarming dan menyenangkan untuk ditonton berkali-kali."
+    }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "title": "Top Gun: Maverick",
+            "release_date": "May 7, 2022",
+            "watched": "Belum",
+            "rating": "-",
+            "review": "-"
+}
+    }
+]
