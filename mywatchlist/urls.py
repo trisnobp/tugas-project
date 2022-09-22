@@ -7,7 +7,7 @@ app_name = 'mywatchlist'
 
 # Routing untuk menunjukkan data dalam bentuk html, xml, atau json
 urlpatterns = [
-    path('', show_watchlist_html, name='show_watchlist_html'),
+    path('', show_watchlist_html, name='show_watchlist_html1'),
     path('html/', show_watchlist_html, name='show_watchlist_html'),
     path('xml/', show_watchlist_xml, name='show_watchlist_xml'),
     path('json/', show_watchlist_json, name='show_watchlist_json')
