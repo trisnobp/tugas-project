@@ -20,8 +20,8 @@ Penggunaan generator pada pembuatan elemen <form> membuat kita tidak perlu menul
 Sebagai contoh, kita bisa lihat pada file login.html:
 
 # Contoh Kode
-   <form method="POST" action="">
-        {% csrf_token %}
+   //<form method="POST" action="">
+        //{% csrf_token %}
         <table>
             <tr>
                 <td>Username: </td>
