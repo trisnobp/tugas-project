@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Mendaftarkan Task</title>
+{% endblock meta %}
+
+{% block content %}  
+
+<div class = "login">
+    <h1>Masukkan Task</h1>  
+
+        <form  method="POST">  
+            {% csrf_token %}  
+            {{form.as_p}}
+            <input type="submit"/>
+        </form>
+
+</div>  
+
+{% endblock content %}

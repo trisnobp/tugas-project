@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <h1>Your To-do-List</h1>
+
+ <h5>Name: </h5>
+ <p>{{user.username}}</p>
+
+ <table>
+   <tr>
+     <th>Tanggal Pembuatan</th>
+     <th>Task</th>
+     <th>Deskripsi</th>
+   </tr>
+   {% comment %} Add the data below this line {% endcomment %}
+   {% for item in data %}
+     <tr>
+       <th>{{item.date}}</th>
+       <th>{{item.title}}</th>
+       <th>{{item.description}}</th>
+     </tr>
+   {% endfor %}
+ </table>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
+{% endblock content %}
+
