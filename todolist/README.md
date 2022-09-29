@@ -20,25 +20,8 @@ Penggunaan generator pada pembuatan elemen <form> membuat kita tidak perlu menul
 Sebagai contoh, kita bisa lihat pada file login.html:
 
 # Contoh Kode
-   //<form method="POST" action="">
-        //{% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
+   
+   [![carbon.png](https://i.postimg.cc/054hJTsC/carbon.png)](https://postimg.cc/nMv3ywMs)
   
 Potongan kode HTML di atas adalah cara membuat form secara manual, yaitu mengisi form dengan table, input, dan lainnya.
 
