@@ -53,8 +53,10 @@ Untuk logout, pada fungsi views.py yang meng-handle logout, kita panggil fungsi 
 Untuk membuat halaman utama to-do-list, kita buat halaman html untuk menampilkan to-do-list kepada user. Kemudian pada fungsi show_todolist pada views.py, kita ambil data yang ada pada database berdasarkan user yang sedang login, kemudian dilakukan serangkaian proses untuk memetakan data pada file HTML yang dibuat.
 
 - Membuat halaman pembuatan task
+   
 Untuk membuat halaman pembuatan task, dibuat sebuah form dengan file forms.py. Form ini akan mengambil data berupa title dan description yang di-input oleh user. Nantinya, pada fungsi create_task pada views.py, data dari forms akan diambil melalui request.POST.get() dan di-assign pada atribute object Task yang dibuat, kemudian object Task tersebut disimpan ke database.
  
 - Membuat routing
+   
 Untuk routing, kita hanya perlu menambahkan path pada file urls.py di folder todolist agar fungsi-fungsi yang dibuat dapat diakses melalui route yang kita definisikan.
   
