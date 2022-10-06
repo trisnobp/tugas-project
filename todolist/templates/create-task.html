@@ -1,20 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block meta %}
-<title>Mendaftarkan Task</title>
+<title>To-do-List | Create Task</title>
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
 {% endblock meta %}
 
 {% block content %}  
 
-<div class = "login">
-    <h1>Masukkan Task</h1>  
+<body class="bg_main2" style="margin:auto;">
+<div class = "login center" style="background: white;top: 50%; left: 50%;;">
+    <h2>Create Task</h2>  
 
         <form  method="POST">  
-            {% csrf_token %}  
+            {% csrf_token %}
             {{form.as_p}}
             <input type="submit"/>
         </form>
-
-</div>  
+</div>
+</body>
 
 {% endblock content %}

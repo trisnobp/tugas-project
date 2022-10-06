@@ -1,0 +1,38 @@
+.backg {
+    background: url('b9.png');
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+
+.center {
+    margin-top: 50px;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: beige;
+    border-radius: 20px;
+}
+
+.center h2 {
+    text-align: center;
+    padding:  0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form {
+    box-sizing: border-box;
+}
+
+.bg_main {
+    background-image: url('bg7.jpg');
+    background-size: cover;
+}
+
+.bg_main2 {
+    background-image: url('bg7.jpg');
+    background-size: cover;
+}

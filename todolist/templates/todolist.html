@@ -1,29 +1,44 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>To-do-List</title>
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+{% endblock meta %}
 
 {% block content %}
+<body class="bg_main">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" style="padding-left: 30px;">Welcome, {{user.username}}</a>
+      <h2 style="text-align: center; font-family: cursive; color: white;">To-do-List</h2>
+      <form class="form-inline">
+        <button class="btn btn-light my-2 my-sm-0" type="submit" style="margin-right: 20px;"><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+        <button class="btn btn-light my-2 my-sm-0" type="submit" style="margin-right: 20px;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+      </form>
+  </nav>
 
- <h1>Your To-do-List</h1>
+  <div>
+    <h3 style="padding: 20px; margin-left: 5%; color: black;">Your Tasks</h3>
+  </div>
 
- <h5>Name: </h5>
- <p>{{user.username}}</p>
+  <div class="container">
+    <div class="row">
+  {% for item in data %}
+      <div class="col-4">
+        <div class="card" style="width: 18rem; margin-top: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{item.date}}</h6>
+            <p class="card-text">{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+    </div>
+  </div>
 
- <table>
-   <tr>
-     <th>Tanggal Pembuatan</th>
-     <th>Task</th>
-     <th>Deskripsi</th>
-   </tr>
-   {% comment %} Add the data below this line {% endcomment %}
-   {% for item in data %}
-     <tr>
-       <th>{{item.date}}</th>
-       <th>{{item.title}}</th>
-       <th>{{item.description}}</th>
-     </tr>
-   {% endfor %}
- </table>
-
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-<button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
+</body>
 {% endblock content %}
 

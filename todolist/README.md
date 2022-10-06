@@ -7,6 +7,7 @@ Kelas       : PBP-F
 Asdos       : BYN
 
 
+# Tugas 4
 
 1) Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
 
@@ -59,4 +60,54 @@ Untuk membuat halaman pembuatan task, dibuat sebuah form dengan file forms.py. F
 - Membuat routing
    
 Untuk routing, kita hanya perlu menambahkan path pada file urls.py di folder todolist agar fungsi-fungsi yang dibuat dapat diakses melalui route yang kita definisikan.
+
+
+# Tugas 5
+1) Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+
+Inline CSS: 
+
+Menggunakan CSS langsung pada tag HTML tertentu, yaitu dengan menambahkan style pada tag. Inline CSS akan sangat berguna jika kita tidak menggunakan banyak properti style pada suatu tag, sehingga kita tidak perlu membuat file CSS. Akan tetapi, kekurangannya adalah kita jadi perlu menuliskan property style pada semua tag yang perlu menggunakan CSS, di mana hal tersebut tidak efisien, apalagi jika terdapat beberapa tag yang menggunakan property style yang sama.
+
+
+Internal CSS:
+
+Internal CSS berarti kita meletakkan tag style di dalam tag head pada HTML. Style CSS yang dipasang dengan metode ini akan di-download setiap halaman dipanggil. Keuntungannya adalah kita tidak perlu menguoload beberapa file karena HTML dan CSS bisa digunakan di file yang sama. Akan tetapi, penggunaan Internal CSS akan meningkatkan waktu akses website dan tidak efisien apabila kita akan menggunakan CSS yang sama pada beberapa file HTML,
+
+
+External CSS:
+
+External CSS berarti kita membuat suatu file CSS pada suatu folder secara terpisah yang berisi rule-rule styling. Untuk menggunakannya, kita hanya perlu me-load file tersebut ke dalam file html yang akan menggunakan CSS. Salah satu keuntungan dari menggunakan External CSS adalah kita bisa menggunakan file CSS yang sama di banyak file html dan struktur HTML bisa menjadi lebih rapih. Akan tetapi, kekurangan dari external CSS adalah halaman html tidak akan tampil dengan sampai file CSS selesai dipanggil.
+
+2) Jelaskan tag HTML5 yang kamu ketahui.
+
+5 tag HTML5 yang biasa digunakan:
+
+- <a>: Untuk menaruh suatu link
+- <body>: Mendefinisikan body dari dokumen HTML
+- <button>: Untuk membuat suatu tombol
+- <div>: Membuat suatu division atau section pada dokumen HTML
+- <li>: Untuk membuat list item
+
+
+3) Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+
+- element: Memilih semua elemen <tag> 
+- # id: Memilih elemen pada CSS dengan id
+- .class: Memilih semua properti yang didefinisikan pada file CSS dengan class (Misalnya, selector: .bg | <tag class="bg"> )
+
+
+4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+Pertama-tama, dibuat file style.css di dalam folder static pada app todolist. Folder static juga diisi dengan gambar-gambar yang akan digunakan pada HTML. Selain menggunakan file style.css, saya juga menggunakan inline CSS untuk beberapa tag tertentu yang tidak membutuhkan banyak property.
+
+
+Terdapat 4 file yang menggunakan CSS, yaitu login, register, create-task, dan todolist. Pada register dan create-task, saya hanya mengubah background page dan mengubah tata letak dari form-nya. Pada login page, saya menggunakan class "backg" yang didefinisikan pada file style.css untuk mengubah background-nya menjadi sebuah gambar. Kemudian, saya juga menggunakan .center, .center h2, dan .center form untuk mengubah background dan tata letak setiap elemen pada form login.
+
+
+Pada halaman utama todolist, saya menggunakan 2 elemen utama, yaitu navbar dan cards dari Bootstrap. Pertama-tama, di dalam tag body, kita definisikan navbar beserta properti di dalamnya, yaitu heading yang berisi sapaan kepada user dan 2 tombol, yaitu tombol logout dan tombol untuk menambah task.
+
+
+Kemudian, untuk setiap iterasi dari data user, dibuat sebuah card yang berisi judul task user, tanggal dibuatnya task, dan juga deskripsi dari task. Proses pembuatan card ini juga memanfaatkan class row, container, dan col-4, di mana nantinya setiap baris akan terdiri dari 3 task cards.
+
   
