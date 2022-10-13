@@ -83,17 +83,17 @@ External CSS berarti kita membuat suatu file CSS pada suatu folder secara terpis
 
 5 tag HTML5 yang biasa digunakan:
 
-- <a>: Untuk menaruh suatu link
-- <body>: Mendefinisikan body dari dokumen HTML
-- <button>: Untuk membuat suatu tombol
-- <div>: Membuat suatu division atau section pada dokumen HTML
-- <li>: Untuk membuat list item
+- (a): Untuk menaruh suatu link
+- (body) : Mendefinisikan body dari dokumen HTML
+- (button) : Untuk membuat suatu tombol
+- (div) : Membuat suatu division atau section pada dokumen HTML
+- (li) : Untuk membuat list item
 
 
 3) Jelaskan tipe-tipe CSS selector yang kamu ketahui.
 
 - element: Memilih semua elemen <tag> 
-- # id: Memilih elemen pada CSS dengan id
+- (#) id: Memilih elemen pada CSS dengan id
 - .class: Memilih semua properti yang didefinisikan pada file CSS dengan class (Misalnya, selector: .bg | <tag class="bg"> )
 
 
