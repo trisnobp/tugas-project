@@ -7,8 +7,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.core import serializers
 
 from todolist.forms import TaskForm
 from todolist.models import Task
@@ -21,7 +22,7 @@ def show_todolist(request): # Menunjukkan to-do-list
         'data': data,
         'user': request.user,
     }
-    return render(request, 'todolist.html', context)
+    return render(request, 'todolist_ajax.html', context)
 
 def register(request): # Register akun to-do-list
     form = UserCreationForm()
@@ -67,6 +68,25 @@ def create_task(request): # Membuat task baru di to-do-list
 
     context = {'form': form}
     return render(request, 'create-task.html', context)
+
+def add_task(request): # Buat AJAX
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+
+        new_task = Task(
+            title = title,
+            date = datetime.date.today(),
+            description = description,
+            user  = request.user, 
+        )
+        new_task.save()
+        return render(request, 'todolist_ajax.html')
+    return render(request, 'todolist_ajax.html')
+
+def get_json_data(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def logout_user(request): # Logout
     logout(request)

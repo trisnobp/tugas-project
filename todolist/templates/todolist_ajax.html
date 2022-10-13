@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>To-do-List</title>
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+{% endblock meta %}
+
+{% block content %}
+<body class="bg_main">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" style="padding-left: 30px;">Welcome, {{user.username}}</a>
+      <h2 style="text-align: center; font-family: cursive; color: white;">To-do-List</h2>
+      <form class="form-inline">
+        <button type="button" class="btn btn-light my-2 my-sm-0" type="submit" data-bs-toggle="modal" data-bs-target="#modalTask" style="margin-right: 20px;">Add Task (Modal)</button>
+        <button class="btn btn-light my-2 my-sm-0" type="submit" style="margin-right: 20px;"><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+        <button class="btn btn-light my-2 my-sm-0" type="submit" style="margin-right: 20px;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+      </form>
+  </nav>
+
+  <div>
+    <h3 style="padding: 20px; margin-left: 5%; color: black;">Your Tasks</h3>
+  </div>
+
+  <table id="table_task" style="background-color: azure; width: 100%; border: 3px;"></table>
+
+  </div>
+
+  <div class = "modal fade" id="modalTask" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalLabel">Add Task</h1>
+        </div>
+        <div class="modal-body">
+          <form id="form_modal" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="taskName">Task</label>
+              <input type="text" class="form-control" name="title" id="title" placeholder="What is the task?">
+            </div>
+            <div class="form-group">
+              <label for="taskDescription">Task Description</label>
+              <input type="text" class="form-control" name="description "id="description" placeholder="Add description">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-light my-2 my-sm-0" id="submit_data" data-bs-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<script type="text/javascript">
+
+  async function getTodolist() {
+    return fetch("{% url 'todolist:get_json_data' %}").then((res) => res.json())
+  }
+
+  async function refreshPage() {
+        document.getElementById("table_task").innerHTML = ""
+        const todolist = await getTodolist()
+        let htmlString = `<tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>`
+        todolist.forEach((item) => {
+          htmlString += `\n<tr>
+          <th>${item.fields.date}</th>
+          <th>${item.fields.title}</th>
+          <th>${item.fields.description}</th>
+        </tr>` 
+        })
+        
+        document.getElementById("table_task").innerHTML = htmlString
+  }
+
+
+// Menambahkan data baru ke database todolist
+  function addTodolist() {
+    fetch("{% url 'todolist:add_task' %}", {
+          method: "POST",
+          body: new FormData(document.querySelector('#form_modal'))
+      }).then(refreshPage)
+    return false
+  }
+
+  // Melakukan penambahan data saat tombol submit pada form dipencet
+  document.getElementById("submit_data").onclick = addTodolist
+  refreshPage()
+
+</script>
+
+{% endblock content %}
